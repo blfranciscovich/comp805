@@ -17,6 +17,17 @@ def squared_nums(num_list):
 		result.append(num)
 	return result
 
+def check_title(title_list):
+	"""
+	Removes strings in the title_list that have numbers and aren't title case
+	title_list: list of strings
+	Returns: list of strings that are titles
+	"""
+	result = [ ]
+	for title in title_list:
+		if title.istitle():
+			result.append(title)
+	return result
 
 
 
