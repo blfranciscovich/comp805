@@ -113,6 +113,7 @@ def run_filter_0_items():
 def run_average_grades():
     """
     Demo many uses of the function average_grades()
+    
     Test Cases:
     {'Michael' :[100, 78, 88, 900/10], 'Daniel':[80, 95, 77, 64.0], 'Josh':[99, 89, 94, 66]}, 
     {'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0] 'Josh':[99 + 1 * -2, 40/.5]}, 
