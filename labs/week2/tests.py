@@ -116,8 +116,8 @@ def run_average_grades():
     
     Test Cases:
     {'Michael' :[100, 78, 88, 900/10], 'Daniel':[80, 95, 77, 64.0], 'Josh':[99, 89, 94, 66]}, 
-    {'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0] 'Josh':[99 + 1 * -2, 40/.5]}, 
-    {'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0] 'Josh':[99 + 1 * -2, 40/.5]}
+    {'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0], 'Josh':[99 + 1 * -2, 40/.5]}, 
+    {'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0],'Josh':[99 + 1 * -2, 40/.5]}
 
     Expected Results:
     {'Josh' : 87.0, 'Daniel': 79.0, 'Michael': 89.0},
@@ -130,11 +130,11 @@ def run_average_grades():
     res = lab2.average_grades(tc)
     print('average_grades({}) --> {}'.format(tc, res))
 
-    tc = {'Michael':[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0] 'Josh':[99 + 1 * -2, 40/.5]}
+    tc = {'Michael':[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0], 'Josh':[99 + 1 * -2, 40/.5]}
     res = lab2.average_grades(tc)
     print('average_grades({}) --> {}'.format(tc, res)) 
 
-    tc = {'Michael':[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0] 'Josh':[99 + 1 * -2, 40/.5]}
+    tc = {'Michael':[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0], 'Josh':[99 + 1 * -2, 40/.5]}
     res = lab2.average_grades(tc)
     print('average_grades({}) --> {}'.format(tc, res))
 
