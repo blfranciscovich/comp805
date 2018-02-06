@@ -1,3 +1,52 @@
+body {
+	magrin: 0;
+}
+nav {
+	background: #333;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 14px 16px;
+	text-decoration: none;
+	margin: 0;
+}
+
+nav a {
+
+	color: white;
+	text-align: center;
+}
+
+nav a:hover {
+	background-color: #111;
+
+}
+
 h1 {
-	color: blue;
+	color: #581845;
+}
+
+h3 {
+	color: #A7203D;
+}
+
+.homepage-banner {
+	text-align: center;
+}
+
+.resume-content h3 {
+	padding-left: 100px;
+}
+
+.resume-content p {
+	padding-left: 150px;
+}
+
+.resume-content ul {
+	padding-left: 200px;
+}
+.resume-header {
+	text-align: center;
+	padding:0;
 }

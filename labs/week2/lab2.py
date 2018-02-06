@@ -22,6 +22,8 @@ def squared_nums(num_list):
 	Squares numbers in num_list
 	num_list: list of numbers
 	Returns: list of these numbers squared
+
+	I added this because I did this last semester to include negative squared numbers
 	"""
 #	result = [ ]
 #	for num in num_list:

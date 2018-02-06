@@ -4,9 +4,26 @@ def home(request):
 	"""
 	Renders home page
 	"""
-	greeting = "uStudy - the best study site in the world!"
-	#first we create a variable with the days of the week as a list
-	days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-	#then we will add it to the template context
-	context = {'our_greeting':greeting, 'weekday_list':days_of_week}
+	context = {} 
 	return render(request, 'home.html', context)
+
+def resume(request):
+	"""
+	Renders resume page
+	"""
+	context = {} 
+	return render(request, 'resume.html', context)
+
+def portfolio(request):
+	"""
+	Renders portfolio page
+	"""
+	context = {} 
+	return render(request, 'portfolio.html', context)
+
+def contact(request):
+	"""
+	Renders contact page
+	"""
+	context = {} 
+	return render(request, 'contact.html', context)
