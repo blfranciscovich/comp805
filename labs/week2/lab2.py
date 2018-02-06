@@ -81,6 +81,6 @@ def average_grades(grades):
 	Returns: dictionary that averages out the grades of each student
 	"""
 	for key, value in grades.items():
-		avgDict[key] = sum(value) / float(len(value))
+		grades[key] = sum(value) / float(len(value))
 	return (grades)
 
