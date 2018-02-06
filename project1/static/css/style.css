@@ -2,37 +2,51 @@ body {
 	magrin: 0;
 }
 nav {
-	background: #d0f1b0;
-	padding: 5px;
-	border-radius: 5px;
-}
-
-nav a{
-	color: black;
-	text-decoration: none;
-	font-size: 1.25em;
-	padding 5px;
-}
-
-.homepage-content{
-	width: 80%;
-	max-width: 400px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.homepage-banner{
-	text-align: center;
-	color: #648e2c;
-	font-size: 2em;
-	max-width: 100%;
-}
-
-.button{
-	background-color: #4caf50;
-	border: none;
-	border-radius: 10px;
+	background: #333;
+	display: block;
 	color: white;
 	text-align: center;
+	font-size: 1.25em;
+	padding: 14px 16px;
 	text-decoration: none;
+	margin: 0;
+}
+
+nav a {
+
+	color: white;
+	text-align: center;
+}
+
+nav a:hover {
+	background-color: #111;
+
+}
+
+h1 {
+	color: #581845;
+}
+
+h3 {
+	color: #A7203D;
+}
+
+.homepage-banner {
+	text-align: center;
+}
+
+.resume-content h3 {
+	padding-left: 100px;
+}
+
+.resume-content p {
+	padding-left: 150px;
+}
+
+.resume-content ul {
+	padding-left: 200px;
+}
+.resume-header {
+	text-align: center;
+	padding:0;
 }
