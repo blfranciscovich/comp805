@@ -1,5 +1,6 @@
 body {
 	magrin: 0;
+	background-color: #D1C3C6;
 }
 nav {
 	background: #333;
@@ -7,19 +8,25 @@ nav {
 	color: white;
 	text-align: center;
 	font-size: 1.25em;
-	padding: 14px 16px;
-	text-decoration: none;
-	margin: 0;
+	padding: 14px 14px 16px 16px;
+	margin: -10px;
+	position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav a {
 
 	color: white;
 	text-align: center;
+	padding: 5px;
+	text-decoration: none;
+	border-right: solid;
 }
 
 nav a:hover {
-	background-color: #111;
+	background-color: #D1C3C6;
+	color: #333;
 
 }
 
@@ -33,6 +40,19 @@ h3 {
 
 .homepage-banner {
 	text-align: center;
+	margin-top: 50px;
+}
+
+.resume-header {
+	margin-top: 50px;
+}
+
+.portfolio-content {
+	margin-top: 50px;
+}
+
+.contact-content {
+	margin-top: 50px;
 }
 
 .resume-content h3 {
