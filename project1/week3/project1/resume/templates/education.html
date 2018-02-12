@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	{% if Education %}
+		<ul>
+			<h3>Education</h3>
+			{% for Education in Education %}
+				<li>{{  Education.institution_name }}</li>
+					<p>Location: {{  Education.location }}</p>
+					<p>Degree: {{  Education.degree }}</p>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<h2>No Education Found!</h2>
+	{% endif %}
+
+
+{% endblock %}
