@@ -5,9 +5,22 @@
 			<div class='homepage-banner'>
 				<h1>Bridget Franciscovich</h1>
 				<p>Digital marketing optimizer and educator with 5+ years of experience preparation of business strategies, preparing reports and remaining the utmost confidence in student and client confidentiality. Possesses an M.S. in Marketing with a concentration in social media marketing, a candidate for an M.S. in Information Technology, and experience in digital marketing analytical tools and business software. Looking to leverage my knowledge and experience in information technology and the business industry.</p>
+
+				{% if Education %}
+					<h3>Education</h3>
+						<ul>
+					{% for Education in Education %}
+						<li>{{  Education.institution_name }}</li>
+							<ul>
+							<li>Location: {{  Education.location }}</li>
+							<li>Degree: {{  Education.degree }}</li>
+							</ul>
+					{% endfor %}
+						</ul>
+				{% else %}
+						<h2>No Education Found!</h2>
+				{% endif %}
+
 			</div>
 		</div>
 {% endblock %}
-{% for educaton in education.queryset %}
-	<p>{{  education }}
-{% endfor %}
