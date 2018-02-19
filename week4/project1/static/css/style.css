@@ -1,0 +1,72 @@
+body {
+	magrin: 0;
+	background-color: #D1C3C6;
+}
+nav {
+	background: #333;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 14px 14px 16px 16px;
+	margin: -10px;
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+
+	color: white;
+	text-align: center;
+	padding: 5px;
+	text-decoration: none;
+	border-right: solid;
+}
+
+nav a:hover {
+	background-color: #D1C3C6;
+	color: #333;
+
+}
+
+h1 {
+	color: #581845;
+}
+
+h3 {
+	color: #A7203D;
+}
+
+.homepage-banner {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.resume-header {
+	margin-top: 50px;
+}
+
+.portfolio-content {
+	margin-top: 50px;
+}
+
+.contact-content {
+	margin-top: 50px;
+}
+
+.resume-content h3 {
+	padding-left: 100px;
+}
+
+.resume-content p {
+	padding-left: 150px;
+}
+
+.resume-content ul {
+	padding-left: 200px;
+}
+.resume-header {
+	text-align: center;
+	padding:0;
+}
