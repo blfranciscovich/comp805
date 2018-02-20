@@ -3,7 +3,7 @@ from .models import Education, Experience, Resume
 import unittest
 
 # Create your tests here.
-class TestResume (TestCase):
+class TestResume (unittest.TestCase):
 
     def setUp(self):
         self.resume.save()
@@ -28,7 +28,7 @@ class TestResume (TestCase):
         """
         Tests models.get_education(self):
         """
-        expected = self.education_set.all()
+        expected = list(education.education.all())
         self.assertEqual(self.resume.get_education().first(), expected)
 
     def test_get_experience(self):
