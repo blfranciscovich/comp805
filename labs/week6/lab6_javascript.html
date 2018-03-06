@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 
 <head>
@@ -35,42 +35,106 @@
 
 	<div id="prob1">
 		<p class='problem'>1. When I click the button below, it should change from "click me!" to "I was clicked!"</p>
-		<button>Click Me!</button>
+		<button id="button1" onclick="change_text()">Click Me!</button>
 	</div>
-
+	<script>
+		function change_text(){
+		onlclick=document.getElementById("button1").innerHTML = "I was clicked!"
+	}
+	</script>
 	<div id="prob2">
 		<p class='problem'>2. There are two buttons below. When a button is clicked, the other
-			 bottom should appear and the button that was clicked should disappear.</p>
-		<button>Button A: Show B</button>
-		<button>Button B: Show A</button>
+			 button should appear and the button that was clicked should disappear.</p>
+		<button id="button2a" onclick="toggle(1);" style="display:block;">Button A: Show B</button>
+		<button id="button2b" onclick="toggle(2);" style="display:none;">Button B: Show A</button>
 	</div>
+	<script>
+		function toggle(button_id){
+			button2a = document.getElementById("button2a");
+			button2b = document.getElementById("button2b");
+			if (button_id == 1){
+				button2a.style.display = 'none';
+				button2b.style.display = 'block';
+		}
+		if (button_id == 2){
+			button2b.style.display = 'none';
+			button2a.style.display = 'block';
+	}
+	}
+	</script>
+	<div id="prob3">
+		<p class='problem' id="pink" style="color:black;">3. My favorite color is is pink. When I click the button below. I want
+			this paragraph to change to my favorite color</p>
+		<button onclick="change_style();">Pink Is My Favorite Color</button>
+	</div>
+	<script>
+	function change_style() {
+			document.getElementById("pink").style.color = "pink";
+
+}
+	</script>
 
 	<div id="prob4">
-		<p class='problem'>3. My favorite color is is pink. When I click the button below. I want
-			this header to change to my favorite color</p>
-		<button>Pink Is My Favorite Color</button>
+	  <p class='problem'>4. I like to say hi to people. There is an unorded list below and a button. When I click the button,
+	    I want another list item to appear greeting a new person.</p>
+	  <input type="text" id="name"/>
+	  <button onclick="add_item()">Say Hi!</button>
+	  <ul id="add_here"></ul>
 	</div>
-
-	<div id="prob4">
-		<p class='problem'>4. I like to say hi to people. There is an unorded list below and a button. When I click the button,
-			I want another list item to appear greeting a new person.</p>
-		<button>Say Hi!</button>
-		<ul></ul>
-	</div>
+	<script>
+	function add_item(){
+	  var ul = document.getElementById("add_here");
+	  var name = document.getElementById("name");
+	  var li = document.createElement("li");
+		var greeting = "Hello, " + name.value + "!"
+	  li.setAttribute('id', name.value);
+	  li.appendChild(document.createTextNode(greeting));
+	  ul.appendChild(li);
+	}
+	</script>
 
 	<div id="prob5">
-		<p class='problem'>5. I like to browse the web. But I'm a nerd, and only use the console.
+		<p class='problem'>5. I like to browse the web. But I''m a nerd, and only use the console.
 			There is a text box and button below. I want to put a url into the text box, click the button, and see the response in the console.</p>
-		<input type="text">
-		<button>Fetch!</button>
+		<input type="text" id="question5">
+		<button onclick="fetch_http();">Fetch!</button>
 	</div>
-
+	<script>
+	function fetch_http(){
+			var qs = document.getElementById("question5").value;
+			fetch(qs).then(function(response){
+					return response.json();
+			}).then(function(response){
+					console.log(response);
+			}).catch(function(error){
+					console.log(error);
+			})
+	}
+	</script>
 	<div id="prob6">
-		<p class='problem'>6. I like my data like I like my news...fake. Fill the empty ul below with some fake data from https://jsonplaceholder.typicode.com/ when I click the fetch button.</p>
-		<button>Fetch!</button>
-		<ul></ul>
+		<p class='problem'>6. I like my data like I like my news...fake. Fill the empty ul below with some fake data from
+			https://jsonplaceholder.typicode.com/ when I click the fetch button.</p>
+		<button onclick="fake_news()">Fetch!</button>
+		<ul id="list6"></ul>
 	</div>
-
+	<script>
+	function fake_news(){
+		var url = "https://jsonplaceholder.typicode.com/posts/1";
+		fetch(url).then(function(response){
+				return response.json();
+		}).then(function(response){
+				var test = JSON.stringify(response).split('\\n').join(' ').split(',').join(', ').split(':').join(' : ');;
+				console.log(response);
+				console.log(test);
+				var ul = document.getElementById("list6");
+				var li = document.createElement("li");
+				li.appendChild(document.createTextNode(test));
+				ul.appendChild(li);
+		}).catch(function(error){
+				console.log(error);
+		})
+}
+	</script>
 <script>
 	alert('Have fun! Submit by placing your finished file in workspace/labs/week6 and push to git. Collaborate via slack.');
 </script>
